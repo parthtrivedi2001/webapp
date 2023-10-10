@@ -1,66 +1,37 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    
-    <!-- Group ID: A unique identifier for your project's group (usually reverse domain notation) -->
-    <groupId>lu.amazon.aws.demo</groupId>
-    
-    <!-- Artifact ID: The name of your project -->
-    <artifactId>WebApp</artifactId>
-    
-    <!-- Packaging: Specifies the type of artifact produced by this project (e.g., jar, war) -->
-    <packaging>war</packaging>
-    
-    <!-- Version: The version of your project -->
-    <version>1.0-SNAPSHOT</version>
-    
-    <!-- Project Name: A human-readable name for your project -->
-    <name>WebApp Maven Webapp</name>
-    
-    <!-- Project URL: A URL where more information about your project can be found -->
-    <url>http://maven.apache.org</url>
-    
-    <!-- Dependencies: Add dependencies here as needed -->
-    <dependencies>
-        <!-- Example: JUnit for testing (you can add more dependencies) -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version> <!-- Use a more recent version of JUnit -->
-            <scope>test</scope>
-        </dependency>
-        <!-- Add your application dependencies here -->
-    </dependencies>
-    
-    <!-- Build Configuration: Customize the build process -->
-    <build>
-        <!-- Final Name: The name of the output WAR file (without the .war extension) -->
-        <finalName>WebApp</finalName>
-        
-        <!-- Plugins and Additional Configuration -->
-        <plugins>
-            <!-- Maven Compiler Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version> <!-- Use a more recent version -->
-                <configuration>
-                    <source>1.8</source> <!-- Set the Java version you are using -->
-                    <target>1.8</target> <!-- Set the Java version you are using -->
-                </configuration>
-            </plugin>
-            
-            <!-- Maven War Plugin -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.3</version> <!-- Use a more recent version -->
-                <configuration>
-                    <warSourceDirectory>src/master/webapp</warSourceDirectory>
-                    <!-- You can add more configuration options here -->
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>WebApp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <packaging>war</packaging>
+
+  <dependencies>
+    <!-- Add your dependencies here -->
+    <!-- Example: Servlet API -->
+    <!--
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    -->
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.3</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
