@@ -39,6 +39,28 @@
         <finalName>WebApp</finalName>
         
         <!-- Plugins and Additional Configuration -->
-        <!-- You can configure plugins like the maven-war-plugin here -->
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version> <!-- Use a more recent version -->
+                <configuration>
+                    <source>1.8</source> <!-- Set the Java version you are using -->
+                    <target>1.8</target> <!-- Set the Java version you are using -->
+                </configuration>
+            </plugin>
+            
+            <!-- Maven War Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.3</version> <!-- Use a more recent version -->
+                <configuration>
+                    <warSourceDirectory>src/master/webapp</warSourceDirectory>
+                    <!-- You can add more configuration options here -->
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
