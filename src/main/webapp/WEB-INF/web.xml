@@ -19,7 +19,7 @@
 
   <!-- Welcome file list (default page) -->
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
     <!-- Add additional welcome files if needed -->
   </welcome-file-list>
 </web-app>
