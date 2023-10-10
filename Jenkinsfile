@@ -17,7 +17,7 @@ pipeline {
              steps {
                  sh 'rm  trufflehog || true'
                  sh 'docker run gesellix/trufflehog --json https://github.com/parthtrivedi2001/webapp.git > trufflehog'
-                 sh 'cat trufflehog'  '
+                 sh 'cat trufflehog'
              }
         }
 
